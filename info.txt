@@ -1,0 +1,18 @@
+Javascript: 
+    - Syncronous
+    - Single Threaded
+    - Prototype based
+
+Everything in Javascript happens insite the Execution context
+
+                    Execution Context
+===============================================================
+|                           |                                 |
+|           Memory          |           Code                  |
+|   (Variable Environment)  |     (Thread of Execution)       |
+|=============================================================|
+|   key: value              |        {Code here}              |
+|   func: () => {}          |                                 |
+|                           |                                 |
+===============================================================
+
