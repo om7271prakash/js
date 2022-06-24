@@ -91,3 +91,11 @@ Call Stack is also known as:
     - Controll Stack
     - Runtime Stack
     - Machine Stack
+
+Hoisting
+    -
+
+
+function(){}                // Behaves like function in Hoisting
+var func = () => {}         // Behaves like variable in Hoisting
+var func = function(){}     // Behaves like variable in Hoisting
