@@ -1,4 +1,3 @@
-
 console.log("x: ", x);
 console.log("getName: ", getName);
 console.log("getName1: ", getName1);
