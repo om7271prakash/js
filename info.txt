@@ -16,3 +16,78 @@ Everything in Javascript happens insite the Execution context
 |                           |                                 |
 ===============================================================
 
+Eg: 
+===============================
+var n = 2;
+function square(num){
+    var ans = num * num;
+    return ans;
+}
+var square2 = square(n);
+var square4 = square(4);
+
+n = argument
+num = parameter
+
+===============================
+
+Execution Context is created in two phases
+    - Memory Creation Phase
+        n: undefined
+        square: { //code }
+        square2: undefined
+        square4: undefined
+
+    - Code Execution Phase
+        n: 2
+        - <skip {}>
+        - function invokes => square2:
+
+            - Execution Context has created for square2
+            
+            - Memory Creation Phase
+                num: undefined
+                ans: undefined
+            - Code Execution Phase
+                num: 2
+                ans: {num * num} => ans: 4
+                return => takes the controll of program where function was invoked
+                return ans => return 4
+                Execution Context: exit();
+
+        - function invokes => square4:
+
+            - Execution Context has created for square4
+            
+            - Memory Creation Phase
+                num: undefined
+                ans: undefined
+            - Code Execution Phase
+                num: 4
+                ans: {num * num} => ans: 16
+                return => takes the controll of program where function was invoked
+                return ans => return 16
+                Execution Context: exit();
+        square2: 16
+
+
+Call Stack: Whenever JS code executed, call stack is populated with Execution Context. When function is invoked and it put new Execution Context inside the call stack
+|=======================|        |=======================|      |=======================|
+|                       |        |                       |      |                       |
+|                       |        |                       |      |                       |
+|                       |   =>   |                       |  =>  |                       |
+|                       |        |                       |      |                       |
+|=======================|        |=======================|      |=======================|
+|                       |        |         square2       |      |         square4       |
+|=======================|        |=======================|      |=======================|
+|   Execution Context   |        |   Execution Context   |      |   Execution Context   |
+|=======================|        |=======================|      |=======================|
+
+
+Call Stack is also known as: 
+    - Call Stack
+    - Execution Context Stack
+    - Program Stack
+    - Controll Stack
+    - Runtime Stack
+    - Machine Stack
