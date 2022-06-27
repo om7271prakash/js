@@ -106,3 +106,7 @@ Undefined and Not Defined :-
 
     Undefined: Memory has been allocated but not assigned any value. Javascript has assigned undefined.
     Not Defined: Neither Memory has allocated nor value has assigned.
+
+Scope Chain and Lexical/Prototype Chain:
+    - Where a specific value could access.
+    - Lexical Environment is the local memory along with Lexical Environment of its parent.
