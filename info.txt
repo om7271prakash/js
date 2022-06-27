@@ -93,9 +93,10 @@ Call Stack is also known as:
     - Machine Stack
 
 Hoisting
-    -
-
 
 function(){}                // Behaves like function in Hoisting
 var func = () => {}         // Behaves like variable in Hoisting
 var func = function(){}     // Behaves like variable in Hoisting
+
+Shortest Javascript Programm is
+    - Empty file
