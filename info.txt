@@ -110,3 +110,26 @@ Undefined and Not Defined :-
 Scope Chain and Lexical/Prototype Chain:
     - Where a specific value could access.
     - Lexical Environment is the local memory along with Lexical Environment of its parent.
+
+let & const declarations are hoisted:
+
+    script > let & const
+    global > var 
+
+    Temporal dead zone:
+        - Phese between memory allocated to let & const and assign value to let & const
+        - When you try to access variable inside a Temporal zone it gives a Reference Error.
+            : Cannot access "a" before initialization.
+
+
+        - If const we assign the value to const again it return the "Type Error".
+
+Three errors: 
+
+    - Syntax Error
+    - Reference Error
+    - Type Error
+
+Temporal dead zone should be very low. For that we need to move all definitions and declarations on the top of file.
+
+Shadowing and illigal Shadowing: Redeclare of var and illigal Redeclare var
