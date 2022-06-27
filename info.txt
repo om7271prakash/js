@@ -2,6 +2,7 @@ Javascript:
     - Syncronous
     - Single Threaded
     - Prototype based
+    - Loosely typed language
 
 Everything in Javascript happens insite the Execution context
 
@@ -100,3 +101,8 @@ var func = function(){}     // Behaves like variable in Hoisting
 
 Shortest Javascript Programm is
     - Empty file
+
+Undefined and Not Defined :-
+
+    Undefined: Memory has been allocated but not assigned any value. Javascript has assigned undefined.
+    Not Defined: Neither Memory has allocated nor value has assigned.
